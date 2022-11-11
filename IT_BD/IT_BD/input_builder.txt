@@ -1,2 +1,0 @@
-id name salary id_build
-1 
