@@ -1,7 +1,9 @@
 ﻿#!/usr/bin/env python3
 from sqlite3 import *
 import cgi
+import sys
 
+sys.stdout.reconfigure(encoding='utf-8')
 def add_note_builder(full_name, salary_bulder, id_bulding):
 	with connect('architecture.db') as db:
 		cursor  = db.cursor()
@@ -17,7 +19,7 @@ def main():
 
 	add_note_builder(full_name, salary, id_building)
 		
-	print("Content-type: text/html\n")
+	print('Content-type: text/html\n')
 	print("""<!DOCTYPE HTML>
 	<html>
 	<head>
