@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='ASCII'?>
+<data>
+  <builder>
+    <id>1</id>
+    <full_name>Ivanov Ivan Ivanovich</full_name>
+    <salary>36000</salary>
+    <id_bild>1</id_bild>
+  </builder>
+  <builder>
+    <id>2</id>
+    <full_name>Sirgay Antonovich Driche</full_name>
+    <salary>36000</salary>
+    <id_bild>2</id_bild>
+  </builder>
+  <builder>
+    <id>3</id>
+    <full_name>Ivanov Ivan Daichev</full_name>
+    <salary>30000</salary>
+    <id_bild>3</id_bild>
+  </builder>
+  <builder>
+    <id>4</id>
+    <full_name>Mikhail Romanov</full_name>
+    <salary>300000</salary>
+    <id_bild>1</id_bild>
+  </builder>
+  <builder>
+    <id>5</id>
+    <full_name>Daun Alexsandrovich Ushyakov</full_name>
+    <salary>35000</salary>
+    <id_bild>1</id_bild>
+  </builder>
+  <builder>
+    <id>6</id>
+    <full_name>Georgiy Milhailovich Ushalov</full_name>
+    <salary>34000</salary>
+    <id_bild>2</id_bild>
+  </builder>
+  <builder>
+    <id>7</id>
+    <full_name>Georgiy Milhailovich Ushalov</full_name>
+    <salary>34000</salary>
+    <id_bild>2</id_bild>
+  </builder>
+  <builder>
+    <id>8</id>
+    <full_name>Victor Milhailovich Ushalov</full_name>
+    <salary>34000</salary>
+    <id_bild>3</id_bild>
+  </builder>
+  <builder>
+    <id>9</id>
+    <full_name>Pavel Milhailovich Ushalov</full_name>
+    <salary>34000</salary>
+    <id_bild>3</id_bild>
+  </builder>
+  <builder>
+    <id>10</id>
+    <full_name>l;skdgj s;fklgj s;dfgjo</full_name>
+    <salary>1</salary>
+    <id_bild>1</id_bild>
+  </builder>
+  <builder>
+    <id>11</id>
+    <full_name>vl se pi</full_name>
+    <salary>1</salary>
+    <id_bild>1</id_bild>
+  </builder>
+  <builder>
+    <id>12</id>
+    <full_name>&#1050;&#1091;&#1088;&#1073;&#1072;&#1090;&#1089;&#1082;&#1080;&#1081; &#1040;&#1083;&#1077;&#1082;&#1089;&#1072;&#1085;&#1076;&#1088; &#1052;&#1080;&#1093;&#1072;&#1081;&#1083;&#1086;&#1074;&#1080;&#1095;</full_name>
+    <salary>60000</salary>
+    <id_bild>2</id_bild>
+  </builder>
+  <builder>
+    <id>13</id>
+    <full_name>&#1050;&#1091;&#1088;&#1073;&#1072;&#1090;&#1089;&#1082;&#1080;&#1081; &#1040;&#1083;&#1077;&#1082;&#1089;&#1072;&#1085;&#1076;&#1088; &#1052;&#1080;&#1093;&#1072;&#1081;&#1083;&#1086;&#1074;&#1080;&#1095;</full_name>
+    <salary>60000</salary>
+    <id_bild>2</id_bild>
+  </builder>
+  <builder>
+    <id>14</id>
+    <full_name>&#1050;&#1091;&#1088;&#1073;&#1072;&#1090;&#1089;&#1082;&#1080;&#1081; &#1042;&#1083;&#1072;&#1076;&#1080;&#1084;&#1080;&#1088; &#1052;&#1080;&#1093;&#1072;&#1081;&#1083;&#1086;&#1074;&#1080;&#1095;</full_name>
+    <salary>60000</salary>
+    <id_bild>2</id_bild>
+  </builder>
+  <builder>
+    <id>15</id>
+    <full_name>Tanmay</full_name>
+    <salary>36000</salary>
+    <id_bild>1</id_bild>
+  </builder>
+  <builder>
+    <id>16</id>
+    <full_name>Tanmay</full_name>
+    <salary>36000</salary>
+    <id_bild>1</id_bild>
+  </builder>
+  <builder>
+    <id>17</id>
+    <full_name>Tanmay</full_name>
+    <salary>36000</salary>
+    <id_bild>1</id_bild>
+  </builder>
+</data>
