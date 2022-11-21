@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Добавление записи в базу</title>
 </head>
 <body>
@@ -16,6 +17,11 @@
 	</form>
 	<form action="/Padges/add_property_dev.html">
 		<button type="submit" style="height:20px;width:200px">Таблица "Застройщик"</button>
+		<p></p>
+	</form>
+	<form action="/cgi-bin/download_file.py" method="post" enctype="multipart/form-data">
+		<input type="file" name="filename">
+		<input type="submit">
 		<p></p>
 	</form>
 	<form action="/Padges/begin_padge_form.html">

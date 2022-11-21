@@ -6,7 +6,7 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 def show_note_builder():
-    
+
     with connect('architecture.db') as db:
         cursor  = db.cursor()
         data = """select * from builder"""
@@ -18,9 +18,9 @@ def show_note_builder():
             print("<p>Зарплата {} </p>".format(row[2]))
             print("<p>Номер стройки {} </p><p></p>".format(row[3]))
 
-    
-            
- 
+
+
+
 print("Content-type: text/html\n")
 print("""<!DOCTYPE HTML>
 	<html>
@@ -28,10 +28,14 @@ print("""<!DOCTYPE HTML>
 		<meta charset="utf-8">
 		<title>Добавление записи</title>
 	</head>
-	<body>""") 
+	<body>""")
 show_note_builder()
+print("""<p>Данные внесены</p>
+        <form action="/cgi-bin/xml_print_bulder.py">
+			<button type="submit" >Вывод в xml</button>
+            <p></p>
+		</form>""")
 print("""<form action="/Padges/show_date_padges.html">
-			<p>Данные внесены</p>
 			<button type="submit" >Вернутся назад</button>
 		</form>
 	</body>
