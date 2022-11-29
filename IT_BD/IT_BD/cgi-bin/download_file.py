@@ -14,7 +14,7 @@ def add_note_builder(full_name, salary_bulder, id_bulding):
 		data = data_templayt.format(name = full_name, salary = salary_bulder, id_bulding = id_bulding)
 		cursor.execute(data)
 
-def add_note_builder(adress_building, type_building, name_company):
+def add_note_building(adress_building, type_building, name_company):
 	with connect('architecture.db') as db:
 		cursor  = db.cursor()
 		data_templayt = """insert into building(adress_building, type_building, name_company)

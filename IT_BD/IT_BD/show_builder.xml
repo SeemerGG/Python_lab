@@ -102,4 +102,16 @@
     <salary>36000</salary>
     <id_bild>1</id_bild>
   </builder>
+  <builder>
+    <id>18</id>
+    <full_name>Tanmay</full_name>
+    <salary>36000</salary>
+    <id_bild>1</id_bild>
+  </builder>
+  <builder>
+    <id>19</id>
+    <full_name>Fraer</full_name>
+    <salary>36000</salary>
+    <id_bild>1</id_bild>
+  </builder>
 </data>
