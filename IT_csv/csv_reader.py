@@ -3,7 +3,8 @@ import pandas as pd
 
 def main():
     cont_answer = 0
-    data = pd.read_csv('7 - 2.csv', delimiter=',')
+    file_name = input()
+    data = pd.read_csv(file_name, delimiter=',')
     names = data.columns
     for i in range(0,len(data)):
         if(data['Состояние'][i] == 'Завершено'):
