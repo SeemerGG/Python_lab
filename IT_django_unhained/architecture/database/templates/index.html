@@ -1,0 +1,66 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Добавление записи</title>
+</head>
+<body>
+	<form method="post" action="add_builder/">
+		{% csrf_token %}
+		<h1>Таблица "Строитель"</h1>
+		<p>Полное имя</p>
+		<p><input name="full_name" type="text"></p>
+		
+		<p>Номер площадки</p>
+		<p><input name="building_id" type="text"></p>
+		
+		<p>Зарплата</p>
+		<p><input name="salary" type="text"></p>
+
+		<p><button type="submit">Внести</button></p>
+	</form>
+	
+	<form action="show_builder/">
+		{% csrf_token %}
+		<button type="submit" style="height:20px;width:200px">Выгрузить</button>
+		<p></p>
+	</form>
+	
+	<form action="upload_builder/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<input type="file" name="filename">
+		<input type="submit">
+		<p></p>
+	</form>
+	
+	<form action="add_building/" method="post">
+		{% csrf_token %}
+		<h1>Таблица "Строительная площадка"</h1>
+		<p>Адрес</p>
+		<p><input name="adress_building" type="text"></p>
+		
+		<p>Тип здания</p>
+		<p><input name="type_building" type="text"></p>
+
+		<p>Наименование компании застройщика</p>
+		<p><input name="name_company" type="text"></p>
+
+		<p><button type="submit">Внести</button></p>
+	</form>
+	
+	<form action="add_property_dev/" method="post">
+		{% csrf_token %}
+		<h1>Таблица "Застройщик"</h1>
+		<p>Наименование компании</p>
+		<p><input name="name_company" type="text"></p>
+		
+		<p>Адрес главного офиса</p>
+		<p><input name="adress_main_office" type="text"></p>
+		
+		<p>Номер горячей линии</p>
+		<p><input name="hotline_number" type="text"></p>
+		
+		<p><button type="submit">Внести</button></p>
+	</form>
+</body>
+</html>
