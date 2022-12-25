@@ -9,21 +9,25 @@ from django.db import models
 
 
 class Builder(models.Model):
-    id_builder = models.AutoField(primary_key=True, blank=True, null=False)
+    id_builder = models.AutoField(primary_key=True, blank=True)
     full_name = models.TextField(blank=True, null=True)
     salary = models.IntegerField(blank=True, null=True)
-    id_building = models.ForeignKey('Building', models.DO_NOTHING, db_column='id_building')
+    id_building = models.IntegerField()
 
-
+    class Meta:
+        managed = False
+        db_table = 'builder'
 
 
 class Building(models.Model):
     id_building = models.AutoField(primary_key=True)
     adress_building = models.TextField(blank=True, null=True)
     type_building = models.TextField(blank=True, null=True)
-    name_company = models.ForeignKey('PropertyDeveloper', models.DO_NOTHING, db_column='name_company')
+    name_company = models.TextField()
 
-
+    class Meta:
+        managed = False
+        db_table = 'building'
 
 
 class PropertyDeveloper(models.Model):
@@ -31,4 +35,6 @@ class PropertyDeveloper(models.Model):
     adress_main_office = models.TextField(blank=True, null=True)
     hotline_phone_number = models.TextField(blank=True, null=True)
 
-
+    class Meta:
+        managed = False
+        db_table = 'property_developer'

@@ -2,15 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import sys
 from lxml import etree, objectify
-from .models import Builder, Building, PropertyDeveloper
+from .models import PropertyDeveloper, Builder, Building
 import xml.dom.minidom as minidom
 
 # Create your views here.
 def index(request):
     return render(request, "index.html")
 
-'''def add_builder_to_db(name, sal, b_id):
-    Building.objects.create(full_name=name,salary = sal, id_building= b_id)
+def add_builder_to_db(name, sal, b_id):
+    Builder.objects.create(full_name=name,salary = sal, id_building= b_id)
 
 def add_property_dev_to_db(name, adress, hotline):
     PropertyDeveloper.objects.create(name_company = name, adress_main_office = adress, hotline_number = hotline)
@@ -20,8 +20,8 @@ def add_building_to_db(adress, type, name_c):
 
 def add_builder(request):
     name = request.POST.get("full_name", "Undefined")
-    sal = request.POST.get("salary", "Undefined")
-    b_id = request.POST.get("building_id", "Undefined")
+    sal = int(request.POST.get("salary", "Undefined"))
+    b_id = int(request.POST.get("building_id", "Undefined"))
     data = { "name": name, "sal": sal, "b_id":b_id}
 
     add_builder_to_db(name, sal, b_id)
@@ -30,10 +30,10 @@ def add_builder(request):
 
 def create_builder(buld, id, full_name, sal, b_id):
     buder= buld.createElement("builder")
-    buder.setAtribute("id", str(id))
+    buder.setAttribute("id", str(id))
     buder.setAttribute("full_name", full_name)
-    buder.setAttribute("salary", sal)
-    buder.setAttribute("building_id", b_id)
+    buder.setAttribute("salary", str(sal))
+    buder.setAttribute("id_building", str(b_id))
     return buder
 
 def download_builder_xml(request):
@@ -43,19 +43,19 @@ def download_builder_xml(request):
     q = Builder.objects.all()
 
     for b in q:
-        root.appendChild(create_builder(bul, b.builder_id, b.full_name, b.salary, b.id_building))
+        root.appendChild(create_builder(bul, b.id_builder, b.full_name, b.salary, b.id_building))
     
     obj_xml = root.toprettyxml()
     print(obj_xml)
     return HttpResponse(obj_xml, content_type= "text/xml")
-
+    
 def show_builder(request):
     s = []
     q = Builder.objects.all()
     for b in q:
-        s.append("id:{}, name:{}, salary:{}, building_id{}".format(b.builder_id,b.full_name, b.salary, b.id_building))
+        s.append("id:{}, name:{}, salary:{}, id_building{}".format(b.id_builder,b.full_name, b.salary, b.id_building))
     data = { "brs":s }
-    return render(request, "show_builders.html", context = data)
+    return render(request, "show_builder.html", context = data)
 
 def parse_xml(filename):
     xml = filename.read()
@@ -66,7 +66,7 @@ def parse_xml(filename):
     for i in brs:
         name = i.getAttribute("full_name")
         salary = i.getAttribute("salary")
-        building_id = i.getAttribute("building_id")
+        building_id = i.getAttribute("id_building")
         add_builder_to_db(name, salary, building_id)
 
 def upload_builder(request):
@@ -103,4 +103,4 @@ def add_property_dev(request):
     add_property_dev_to_db(name_c, adress, hotline)
 
     return render(request, "property_dev.html", context=data)
-    '''
+    

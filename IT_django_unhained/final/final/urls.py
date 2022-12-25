@@ -1,4 +1,4 @@
-"""arche URL Configuration
+"""final URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from database import views
-
 urlpatterns = [
     path('', views.index),
-    '''path('add_builder/', views.add_builder),
+    path('add_builder/', views.add_builder),
     path('add_building/', views.add_building),
     path('add_property_dev/', views.add_property_dev),
     path('show_builder/', views.show_builder),
-    path('upload_builder/', views.upload_builder)'''
+    path('upload_builder/', views.upload_builder),
+    path('download_builder_xml/', views.download_builder_xml),
 ]

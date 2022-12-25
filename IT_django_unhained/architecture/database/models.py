@@ -10,10 +10,10 @@ class building(models.Model):
     building_id = models.AutoField(primary_key=True)
     adress_building = models.TextField()
     type_building = models.TextField()
-    property_developer= models.ForeignKey(property_developer, models.DO_NOTHING, db_column='name_company')
+    name_company= models.IntegerField()
 
 class builder(models.Model):
     builder_id = models.AutoField(primary_key=True)
     full_name = models.TextField()
     salary = models.IntegerField()
-    building = models.ForeignKey(building, models.DO_NOTHING, db_column='id_building')
+    builder_id = models.IntegerField()
