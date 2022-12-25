@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import sys
-from lxml import etree, objectify
 from .models import PropertyDeveloper, Builder, Building
 import xml.dom.minidom as minidom
 
@@ -38,7 +37,7 @@ def create_builder(buld, id, full_name, sal, b_id):
 
 def download_builder_xml(request):
     bul = minidom.Document()
-    root  = bul.createElement("builder")
+    root  = bul.createElement("builders")
 
     q = Builder.objects.all()
 
@@ -60,7 +59,7 @@ def show_builder(request):
 def parse_xml(filename):
     xml = filename.read()
 
-    root = minidom.pasreString(xml)
+    root = minidom.parseString(xml)
     brs = root.getElementsByTagName("builder")
 
     for i in brs:
